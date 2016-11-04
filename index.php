@@ -39,7 +39,7 @@ function RandomRestoByInterval($TimeBase, $RestoArray){
 // Set timezone (UTC)
 date_default_timezone_set('UTC');
 
-// Use the day of the year to get a daily changing
+// Use the day of the year to get a daily changing resto
 $DayOfTheYear = date('z'); 
  
 // Array
