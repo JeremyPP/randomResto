@@ -2,40 +2,79 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link href="style.css" type="text/css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 		<title>Random Resto</title>
 		<meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<style type="text/css">
-			html, body {
-				height: 100%;
-				margin: 0;
-				padding: 0;
-			}
-			#map {
-				height: 100%;
-				width: 50%;
-				right: 0;
-				position: absolute !important;
-				top: 0;
-			}
-		</style>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     </head>
 	
     <body>
-	
-		<div id="resto"></div>
+		<section>
+			<div class="restoCard">
+				<div id="restoName"></div>
+				<div id="restoRating">★★★★☆</div> <!-- Static (Placeholder) -->
+				<div id="restoTags"></div>
+				<div id="restoAddress"></div>
+			</div>
+			
+			<div id="map"></div>
 		
-		<div id="map"></div>
+		</section>
 		
-		<script>
-		
-		
+		<script>			
+			<?php
+			$restoList = file_get_contents('resto.json');
+
+			function RandomRestoByInterval($TimeBase, $RestoArray) {
+
+					// Make sure it is a integer
+					$TimeBase = intval($TimeBase);
+
+					// How many items are in the array?
+					$ItemCount = count($RestoArray);
+
+					// By using the modulus operator we get a pseudo
+					// random index position that is between zero and the
+					// maximal value (ItemCount)
+					$RandomIndexPos = ($TimeBase % $ItemCount);
+
+					// Now return the random array element
+					return $RandomIndexPos;
+
+				}
+
+			// Set timezone (UTC)
+			date_default_timezone_set('UTC');
+
+			// Use the day of the year to get a daily changing resto
+			$DayOfTheYear = date('z'); 
+
+			// Decode Json to Array
+			$RandomResto = json_decode($restoList, true);
+
+			$randomRestoArray = RandomRestoByInterval($DayOfTheYear, $RandomResto);
+			?>
+
+			var randomRestoName='<?php print ($RandomResto[$randomRestoArray]["name"]);?>';
+			var randomRestoAddress='<?php print ($RandomResto[$randomRestoArray]["address"]);?>';
+			
+			var randomRestoGpsLat='<?php print ($RandomResto[$randomRestoArray]["gpsLat"]);?>';
+			var randomRestoGpsLong='<?php print ($RandomResto[$randomRestoArray]["gpsLong"]);?>';
+
+			// For test purposes only
+			document.getElementById("restoName").innerHTML = randomRestoName;
+			document.getElementById("restoAddress").innerHTML = randomRestoAddress;
+			
+			
 			// Google Map		
-		
+			
+			var restoLat = parseFloat(randomRestoGpsLat);
+			var restoLong = parseFloat(randomRestoGpsLong);	
+			
 			// Update this variable to change location.
-			var myLatLng = {lat: 48.868487, lng: 2.345923};
+			var myLatLng = {lat: restoLat, lng: restoLong};
 		
 			function initMap() {
 
@@ -50,55 +89,9 @@
 				var marker = new google.maps.Marker({
 					map: map,
 					position: myLatLng,
-					title: 'Hello World!'
+					title: randomRestoName
 				});
 			}
-			
-			
-			// 	
-			
-			<?php
-			function RandomRestoByInterval($TimeBase, $RestoArray){
-			 
-				// Make sure it is a integer
-				$TimeBase = intval($TimeBase);
-			 
-				// How many items are in the array?
-				$ItemCount = count($RestoArray);
-			 
-				// By using the modulus operator we get a pseudo
-				// random index position that is between zero and the
-				// maximal value (ItemCount)
-				$RandomIndexPos = ($TimeBase % $ItemCount);
-			 
-				// Now return the random array element
-				return $RestoArray[$RandomIndexPos];
-			}
-
-			// Set timezone (UTC)
-			date_default_timezone_set('UTC');
-
-			// Use the day of the year to get a daily changing resto
-			$DayOfTheYear = date('z'); 
-			 
-			// Array
-			$RandomResto = array(
-				"L&#39;Atelier - Artisan Crepier - GRANDS BOULEVARDS",
-				"Little Italy Caffe",
-				"Dionysos",
-				"Bien Bien",
-				"Le plomb du cantal",
-				"Hero",
-				"Mazzucco"
-			);
-			?>
-
-			var randomRestoArray='<?php print RandomRestoByInterval($DayOfTheYear, $RandomResto);?>';
-
-			// For test purposes only
-			document.getElementById("resto").innerHTML = randomRestoArray;
-			console.log(<?php echo $DayOfTheYear; ?>)
-
 		</script>
 		
 		<!-- Google map script -->

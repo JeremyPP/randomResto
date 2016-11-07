@@ -1,0 +1,32 @@
+[
+    {
+        "name" : "Little Italy Caffe",
+        "address" : "92 Rue Montorgueil, 75002 Paris",
+		"gpsLat" : 48.865993,
+		"gpsLong" : 2.347249
+    },
+    {
+        "name" : "Dionysos",
+        "address" : "14 Rue des Petits Carreaux, 75002 Paris",
+		"gpsLat" : 48.866872,
+		"gpsLong" : 2.347504
+    },
+    {
+        "name" : "Hero",
+        "address" : "289 Rue St Denis, 75002 Paris",
+		"gpsLat" : 48.869499,
+		"gpsLong" : 2.352343
+    },
+	{
+        "name" : "Bien Bien",
+        "address" : "30 Rue Bergère, 75009 Paris",
+		"gpsLat" : 48.872693,
+		"gpsLong" : 2.344213
+    },
+	{
+        "name" : "L&#39;Atelier - Artisan Crepier",
+        "address" : "15 Rue Sainte-Cécile, 75009 Paris",
+		"gpsLat" : 48.872899,
+		"gpsLong" : 2.345251
+    }
+]

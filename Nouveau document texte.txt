@@ -1,0 +1,39 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	height: 100%;
+	width: 50%;
+	right: 0;
+	position: absolute !important;
+	top: 0;
+}
+
+
+
+.restoCard {
+	position: absolute;
+	width: 360px;
+	height: 360px;
+	margin: 80px 10%;
+	font-family: 'Roboto', sans-serif;
+	color: rgba(0, 0, 0, 0.84);
+}
+
+.restoCard #restoName {
+	font-size: 22px;
+}
+
+.restoCard #restoRating {
+	font-size: 16px;
+	padding: 5px 0;
+	color: rgba(0, 0, 0, 0.52);
+}
+
+.restoCard #restoAddress {
+	padding: 5px 0;
+	font-size: 14px;
+}
