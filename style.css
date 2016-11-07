@@ -37,3 +37,32 @@ html, body {
 	padding: 5px 0;
 	font-size: 14px;
 }
+
+.restoCard #restoTags {
+	padding-bottom: 12px;
+	padding-top: 5px;
+}
+
+.restoCard #restoTags span {
+	background: #607D8B;
+	padding: 4px 8px;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 1px;
+	border-radius: 20px;
+	margin-right: 4px;
+}
+
+.restoCard #restoTags span.tagVeggy {
+	background: #8BC34A;
+}
+
+.restoCard #restoTags span.tagCheap {
+	background: #03A9F4;
+}
+
+.restoCard #restoTags span.tagTakeaway {
+	background: #FFC107;
+}

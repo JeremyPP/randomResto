@@ -15,7 +15,11 @@
 			<div class="restoCard">
 				<div id="restoName"></div>
 				<div id="restoRating">★★★★☆</div> <!-- Static (Placeholder) -->
-				<div id="restoTags"></div>
+				<div id="restoTags"> <!-- Placeholders (we should get this from the json and use js to add corresponding class) -->
+					<span class="tagVeggy">Veggy</span>
+					<span class="tagCheap">Cheap</span>
+					<span class="tagTakeaway">Takeaway</span>
+				</div>
 				<div id="restoAddress"></div>
 			</div>
 			
