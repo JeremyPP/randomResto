@@ -19,13 +19,13 @@
     },
 	{
         "name" : "Bien Bien",
-        "address" : "30 Rue Bergère, 75009 Paris",
+        "address" : "30 Rue BergÃ¨re, 75009 Paris",
 		"gpsLat" : 48.872693,
 		"gpsLong" : 2.344213
     },
 	{
         "name" : "L&#39;Atelier - Artisan Crepier",
-        "address" : "15 Rue Sainte-Cécile, 75009 Paris",
+        "address" : "15 Rue Sainte-CÃ©cile, 75009 Paris",
 		"gpsLat" : 48.872899,
 		"gpsLong" : 2.345251
     }

@@ -16,11 +16,14 @@ html, body {
 
 .restoCard {
 	position: absolute;
-	width: 360px;
-	height: 360px;
-	margin: 80px 10%;
+	width: 50%;
+	height: 100%;
+	padding: 80px 10%;
 	font-family: 'Roboto', sans-serif;
 	color: rgba(0, 0, 0, 0.84);
+	z-index: 999;
+	box-sizing: border-box;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .restoCard #restoName {
@@ -65,4 +68,107 @@ html, body {
 
 .restoCard #restoTags span.tagTakeaway {
 	background: #FFC107;
+}
+
+
+
+
+/* Page loader */
+
+#pageloader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background: #fff;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+#pageloader svg {
+    top: 45%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 42px;
+}
+#pageloader .spinner {
+	-webkit-animation: rotation 1.4s linear infinite;
+	animation: rotation 1.4s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(270deg);
+		transform: rotate(270deg);
+	}
+}
+
+@keyframes rotation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(270deg);
+		transform: rotate(270deg);
+	}
+}
+
+#pageloader .circle {
+	stroke-dasharray: 187;
+	stroke-dashoffset: 0;
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	transform-origin: center;
+	-webkit-animation: turn 1.4s ease-in-out infinite;
+	animation: turn 1.4s ease-in-out infinite;
+}
+
+@-webkit-keyframes turn {
+	0% {
+		stroke-dashoffset: 187;
+	}
+
+	50% {
+		stroke-dashoffset: 46.75;
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+
+	100% {
+		stroke-dashoffset: 187;
+		-webkit-transform: rotate(450deg);
+		transform: rotate(450deg);
+	}
+}
+
+@keyframes turn {
+	0% {
+		stroke-dashoffset: 187;
+	}
+
+	50% {
+		stroke-dashoffset: 46.75;
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+
+	100% {
+		stroke-dashoffset: 187;
+		-webkit-transform: rotate(450deg);
+		transform: rotate(450deg);
+	}
+}
+
+#pageloader svg:nth-child(1){
+	stroke: rgb(158, 158, 158);
 }
