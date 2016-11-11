@@ -3,22 +3,21 @@
 
 ### TODO:
 
-- Choose between a json and a small MySQL DB to save the restaurant list. (will need to be a DB in the future).
-- Setup/create initial restaurant list
-- An item in the restaurant list must have: Name, address, category (cheap/expensive),... More to be defined later.
-- Display a different random item from the list every day (algo should return differents combination cost/location/tags)
+- Setup small DB for accounts and groups.
+- Account creation (user must have: Name, email, password, and optional photo).
+- Group creation: A user can create a new group and add other users to it based on the email (maybe by the name? to be discussed).
+- Manage resto list of the new group (Add a new item).
+- An item in the restaurant list of a group must have: Name, address, tags,... More to be defined later.
+- Display the same different random item from the list each day to all members of the group (with an alternate option as well).
+
 
 
 ### LATER:
 
-- Google map integration. (Display restaurant address on an interactive map).
-- Integration with another API to provide an alternative choice (Discover).
-- Add new items to the restaurant list.
-- Add tags (spicy, veggy, meat, fish, etc.)
+(Ideas to be discussed)
 
-
-### Future:
-
-- Voting system.
-- Confirmation button (did we went there?).
-- Account creation (Groups).
+- Confirmation button (did we went there?) Individual for each user.
+- Voting system (if you say you went there you can give it a rating. A rating can only be given once per user per restaurant.)
+- Integration with another API to provide an alternative choice (Discover button). ??
+- User history.
+- ...
