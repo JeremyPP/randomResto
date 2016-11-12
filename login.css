@@ -1,0 +1,252 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: url(img/loginBg1.jpg);
+	background-size: cover;
+}
+
+html {
+	font-family: "Roboto", Sans-Serif;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.gradientOverlay {
+	background-image: linear-gradient( to right, rgba(0,0,0,0.54), rgba(0, 0, 0, 0) );
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+#main {
+	background: #fff;
+	box-shadow: rgba(0,0,0,0.4) 0px 0px 27px 0px;
+	width: 320px;
+	height: 480px;
+	position: absolute;
+	top: 0;
+	right: 7%;
+	margin: auto 0;
+	bottom: 0;
+	border-radius: 2px;
+}
+
+#main h1 {
+	font-size: 26px;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 26px;
+	padding: 32px 32px 0 32px;
+}
+
+#main h2 {
+	font-size: 24px;
+	font-weight: 300;
+	padding: 0 32px 0 32px;
+	margin-top: 32px;
+	margin-bottom: 20px;
+}
+
+#main h2 .subheading {
+	color: rgba(0, 0, 0, 0.45);
+	display: block;
+	margin-top: 10px;
+	font-size: 22px;
+}
+
+img {
+	position: fixed;
+	width: 152px;
+	left: 32px;
+	top: 32px;
+	opacity: .5;
+}
+
+.loginpage-footer {
+	position: absolute;
+	bottom: 32px;
+	color: #fff;
+	opacity: .7;
+	line-height: 12px;
+	font-size: 13px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.loginpage-footer p {
+	display: inline-block;
+}
+
+.loginpage-footer p a {
+	cursor: pointer;
+}
+
+.loginpage-footer span {
+	padding: 0 18px;
+	cursor: default;
+}
+
+.loginpage-footer .copyright {
+	display: inline-block;
+	margin-right: 52px;
+}
+
+.main-title {
+	position: fixed;
+	color: #fff;
+	font-size: 52px;
+	font-family: Roboto;
+	font-weight: 400;
+	top: -172px;
+	bottom: 0;
+	left: 150px;
+	right: 0;
+	margin: auto 0;
+	height: 122px;
+	width: 442px;
+	line-height: 58px;
+}
+
+.main-subtitle {
+	position: fixed;
+	color: #fff;
+	font-size: 20px;
+	font-family: Roboto;
+	font-weight: 300;
+	top: 152px;
+	bottom: 0;
+	left: 150px;
+	right: 0;
+	margin: auto 0;
+	height: 139px;
+	width: 540px;
+	line-height: 30px;
+	max-width: 580px;
+}
+
+
+/*  Material inputs */
+
+form {
+	max-width: 260px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+}
+
+.group {
+	position: relative;
+	margin: 45px 0;
+}
+
+input {
+	background: none;
+	color: rgba(0, 0, 0, 0.84);
+	font-size: 16px;
+	padding: 10px 10px 10px 0;
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #c6c6c6;
+	font-family: 'Roboto', sans-serif;
+}
+
+input:focus {
+	outline: none;
+}
+
+input:focus ~ label, input:valid ~ label {
+	top: -14px;
+	font-size: 12px;
+	color: #8BC34A;
+}
+
+input:focus ~ .bar:before,
+textarea:focus ~ .bar:before {
+	width: 100%;
+}
+
+input[type="password"] {
+	letter-spacing: 0.3em;
+}
+
+label {
+	color: #c6c6c6;
+	font-size: 16px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	top: 10px;
+	-webkit-transition: 300ms ease all;
+	transition: 300ms ease all;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 0px;
+	position: absolute;
+	background: #8BC34A;
+	-webkit-transition: 300ms ease all;
+	transition: 300ms ease all;
+	left: 0%;
+}
+
+
+/**/
+
+.loginBtn {
+	background: #8BC34A;
+	border: none;
+	border-radius: 2px;
+	width: 100%;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 0 16px;
+	font-weight: 500;
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;
+	letter-spacing: .8px;
+}
+
+.loginBtn:focus,
+.loginBtn:active {
+	background: #689F38;
+}
+
+.loginBtn:active {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+
+/**/
+
+.createAccountLink {
+	text-align: center;
+	margin-top: 18px;
+	color: rgba(0,0,0,0.54);
+	line-height: 26px;
+}
+
+.createAccountLink a {
+	color: #607D8B;
+	text-decoration: none;
+	font-weight: 500;
+}
