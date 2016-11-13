@@ -2,10 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="login.css" rel="stylesheet">
+		<title>Random Resto</title>
+		<meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-	</head>
+    </head>
 	<body>
 		
 		<div class="gradientOverlay"></div>
@@ -16,7 +19,7 @@
 			with the decision. No more struggling between places to go for lunch!
 		</h2>
 		
-		<div id="main">
+		<div class="loginContainer main">
 			<h2>
 			Welcome,<span class="subheading">login or create a new account to continue</span>
 			</h2>
@@ -34,17 +37,54 @@
 				
 				<input type="submit" value="login" class="loginBtn">
 				
-				<div class="createAccountLink">or<br><a href="">Create an account</a></div>
+				<div class="createAccountLink">or<br><p>Create an account</p></div>
 			</form>
 			
 		</div>
 		
-		<img src="img/logo.png" alt="Resto Square logo">
+		<div class="newAccountContainer main">
+			<div class="loginLink">
+				<img src="img/back.png">
+			</div>
+			
+			<h2>
+			<span class="subheading">Enter your email and a password to create your account</span>
+			</h2>
+			
+			<form>
+				<div class="group">
+				  <input type="email" required="required"/><span class="highlight"></span><span class="bar"></span>
+				  <label>Email</label>
+				</div>
+
+				<div class="group">
+				  <input type="password" required="required"/><span class="highlight"></span><span class="bar"></span>
+				  <label>Password</label>
+				</div>
+				
+				<input type="submit" value="continue" class="loginBtn">
+
+			</form>
+		</div>
+		
+		<img src="img/logo.png" alt="Resto Square logo" class="logo">
 		
 		<div class="loginpage-footer">
 			<p class="copyright">Copyrights © 2016 Resto Square</p>
 			<p><a>About Resto Square</a><span>-</span><a>Privacy Policy</a><span>-</span><a>Terms of Use</a><span>-</span><a>GitHub</a></p>
 		</div>
+		
+		<script>
+			$('.createAccountLink').click(function(){
+				$('.loginContainer').hide();
+				$('.newAccountContainer').show();
+			});
+			
+			$('.loginLink img').click(function(){
+				$('.loginContainer').show();
+				$('.newAccountContainer').hide();
+			});
+		</script>
 
 	</body>
 </html>

@@ -23,7 +23,7 @@ html {
 	position: absolute;
 }
 
-#main {
+.main {
 	background: #fff;
 	box-shadow: rgba(0,0,0,0.4) 0px 0px 27px 0px;
 	width: 320px;
@@ -36,7 +36,11 @@ html {
 	border-radius: 2px;
 }
 
-#main h1 {
+.main.newAccountContainer {
+	display: none;
+}
+
+.main h1 {
 	font-size: 26px;
 	font-weight: 400;
 	margin-top: 0;
@@ -44,7 +48,7 @@ html {
 	padding: 32px 32px 0 32px;
 }
 
-#main h2 {
+.main h2 {
 	font-size: 24px;
 	font-weight: 300;
 	padding: 0 32px 0 32px;
@@ -52,14 +56,14 @@ html {
 	margin-bottom: 20px;
 }
 
-#main h2 .subheading {
+.main h2 .subheading {
 	color: rgba(0, 0, 0, 0.45);
 	display: block;
 	margin-top: 10px;
 	font-size: 22px;
 }
 
-img {
+.logo {
 	position: fixed;
 	width: 152px;
 	left: 32px;
@@ -223,6 +227,7 @@ label {
 	line-height: 36px;
 	cursor: pointer;
 	letter-spacing: .8px;
+	margin-top: 52px;
 }
 
 .loginBtn:focus,
@@ -240,13 +245,33 @@ label {
 
 .createAccountLink {
 	text-align: center;
-	margin-top: 18px;
+	margin-top: 14px;
 	color: rgba(0,0,0,0.54);
 	line-height: 26px;
 }
 
-.createAccountLink a {
+.createAccountLink p {
 	color: #607D8B;
 	text-decoration: none;
 	font-weight: 500;
+	cursor:pointer;
+	margin: 0;
+}
+
+
+
+
+.loginLink img {
+	width: 32px;
+	height: 32px;
+	opacity: .52;
+	border-radius: 20px;
+	margin: 30px;
+	margin-bottom: -12px;
+	padding: 2px;
+}
+
+.loginLink img:hover {
+	background: #c6c6c6;
+	cursor: pointer;
 }
