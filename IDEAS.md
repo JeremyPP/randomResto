@@ -9,6 +9,8 @@
 - Manage resto list of the new group (Add a new item).
 - An item in the restaurant list of a group must have: Name, address, tags,... More to be defined later.
 - Display the same different random item from the list each day to all members of the group (with an alternate option as well).
+- A group can be either public or private so that other groups can explore it (or not)
+- The resto list is attached to a group
 
 
 
