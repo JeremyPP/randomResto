@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="style.css" rel="stylesheet">
+		<title>Random Resto</title>
+		<meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script src="jquery.cropit.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+	
+	<body class="newAccountPage">
+
+		<div class="centerHeader">
+			<img src="img/logo.png" class="mainHeaderLogo">
+		</div>
+		
+		<section class="newAccountContainer">
+		
+			<h2>User name and profile picture</h2>
+			<h3>Chose a username and upload your profile picture to complete your account.</h3>
+		
+			<form action="#">
+			
+				<div class="usernameSelectorForm">
+					<div class="group">
+						<input type="text" required="required" class="mi"/><span class="highlight"></span><span class="bar"></span>
+						<label>Username</label>
+					</div>
+				</div>
+			
+				<div class="image-editor">
+					
+					<!-- The actual file input will be hidden -->
+					<input type="file" class="cropit-image-input" />
+					
+					<!-- And clicking on this button will open up select file dialog -->
+					<div class="select-image-btn">Select new image</div>
+					
+					<div class="cropit-preview">
+						<i class="material-icons profilePhotoPlaceholder">person</i>
+					</div>
+					
+					<div class="controls-wrapper">
+						<div class="rotation-btns">
+							<i class="material-icons rotate-cw-btn">rotate_left</i>
+							<i class="material-icons rotate-ccw-btn">rotate_right</i>
+						</div>
+						<div class="slider-wrapper">
+							<i class="material-icons">zoom_out</i>
+							<input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+							<i class="material-icons">zoom_in</i>
+						</div>
+					</div>
+					
+					<input type="hidden" name="image-data" class="hidden-image-data" />
+				</div>
+				
+				<input type="submit" value="Create account" class="createAccountBtn">
+				
+			</form>
+		
+		</section>
+		
+		<script>
+		
+			$(function() {
+				$('.image-editor').cropit();
+						
+				// When user clicks select image button,
+				// open select file dialog programmatically
+				$('.select-image-btn').click(function() {
+					$('.cropit-image-input').click();
+				});
+				
+				// Handle rotation
+				$('.rotate-cw-btn').click(function() {
+					$('.image-editor').cropit('rotateCW');
+				});
+				$('.rotate-ccw-btn').click(function() {
+					$('.image-editor').cropit('rotateCCW');
+				});
+
+				$('form').submit(function() {
+					// Move cropped image data to hidden input
+					var imageData = $('.image-editor').cropit('export');
+					$('.hidden-image-data').val(imageData);
+
+					// Prevent the form from actually submitting
+					return true;
+				});
+			});
+			
+		</script>
+
+	</body>
+
+</html>

@@ -2,7 +2,212 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto', sans-serif;
 }
+
+body.newAccountPage {
+	background: #607D8B;
+	color: #fff;
+}
+
+
+/* Header */
+
+.defaultHeader {
+	background: #fff;
+	height: 64px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+	position: relative;
+}
+
+.centerHeader {
+	height: 64px;
+	position: relative;
+	text-align: center;
+}
+
+.defaultHeader img.mainHeaderLogo,
+.centerHeader img.mainHeaderLogo {
+	height: 44px;
+	padding: 10px;
+}
+
+.defaultHeader nav {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    height: 64px;
+    line-height: 64px;
+}
+
+.defaultHeader nav a {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.84);
+	margin-left: 13px;
+	height: 64px;
+	float: left;
+	padding: 0 18px;
+}
+
+.defaultHeader nav a:hover {
+	background: #fafafa;
+}
+
+
+
+
+/* New account page */
+
+section.newAccountContainer {
+	width: 350px;
+	margin: 0 auto;
+	min-height: 360px;
+}
+
+section.newAccountContainer h2 {
+	font-size: 24px;
+	font-weight: 300;
+	padding: 0 32px 0 32px;
+	margin-top: 52px;
+	margin-bottom: 0;
+}
+
+section.newAccountContainer h3 {
+	font-size: 18px;
+	font-weight: 300;
+	padding: 0 32px;
+	color: rgba(255, 255, 255, 0.45);
+	margin-top: 10px;
+}
+
+.usernameSelectorForm {
+	max-width: 286px;
+	margin: 0 auto;
+}
+
+section.newAccountContainer  input.mi {
+	color: #fff;
+}
+
+.image-editor {
+	margin: 0 auto;
+	width: 310px;
+	text-align: center;
+}
+
+.cropit-preview {
+    background-color: #748f9c;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    margin: 15px auto;
+}
+
+.cropit-preview .profilePhotoPlaceholder {
+	line-height: 250px;
+	color: rgba(0, 0, 0, 0.12);
+	font-size: 200px;
+}
+
+.cropit-preview-image-container {
+	cursor: move;
+}
+
+/* Hide file input */
+input.cropit-image-input {
+	visibility: hidden;
+}
+
+.select-image-btn {
+    border: none;
+    border-radius: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    letter-spacing: .8px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.controls-wrapper {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.controls-wrapper .material-icons {
+	color: #fff;
+}
+
+.controls-wrapper .rotation-btns {
+	font-size: 16px;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.controls-wrapper .rotation-btns i {
+	margin: 0 4px;
+	cursor: pointer;
+}
+
+.controls-wrapper .slider-wrapper {
+    display: inline-block;
+}
+
+.controls-wrapper .slider-wrapper .cropit-image-zoom-input.custom {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: #4e5f68;
+    outline: none;
+    width: 130px;
+    margin: 0 6px;
+    position: relative;
+    top: -12px;
+	border-radius: 10px;
+}
+
+.controls-wrapper .slider-wrapper i {
+	margin-top: 4px;
+}
+
+.controls-wrapper .slider-wrapper input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border-radius: 30px;
+	background-color: #8BC34A;
+	height: 15px;
+	width: 15px;
+	vertical-align:middle;
+}
+
+.createAccountBtn {
+	background: #8BC34A;
+	border: none;
+	border-radius: 2px;
+	width: 250px;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 0 16px;
+	font-weight: 500;
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;
+	margin-top: 52px;
+	margin-bottom: 52px;
+}
+
+
+
+
+/**/
 
 #map {
 	height: 100%;
@@ -11,8 +216,6 @@ html, body {
 	position: absolute !important;
 	top: 0;
 }
-
-
 
 .restoCard {
 	position: absolute;
@@ -70,6 +273,84 @@ html, body {
 	background: #FFC107;
 }
 
+
+
+
+/*  Material inputs */
+
+form {
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.group {
+	position: relative;
+	margin: 45px 0;
+	text-align: left;
+}
+
+input.mi {
+	background: none;
+	color: rgba(0, 0, 0, 0.84);
+	font-size: 16px;
+	padding: 10px 10px 10px 0;
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #c6c6c6;
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+}
+
+input.mi:focus {
+	outline: none;
+}
+
+input.mi:focus ~ label, input.mi:valid ~ label {
+	top: -14px;
+	font-size: 12px;
+	color: #8BC34A;
+}
+
+input.mi:focus ~ .bar:before,
+textarea:focus ~ .bar:before {
+	width: 100%;
+}
+
+input.mi[type="password"] {
+	letter-spacing: 0.3em;
+}
+
+label {
+	color: #c6c6c6;
+	font-size: 16px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	top: 10px;
+	-webkit-transition: 300ms ease all;
+	transition: 300ms ease all;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 0px;
+	position: absolute;
+	background: #8BC34A;
+	-webkit-transition: 300ms ease all;
+	transition: 300ms ease all;
+	left: 0%;
+}
 
 
 
