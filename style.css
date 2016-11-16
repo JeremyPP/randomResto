@@ -138,6 +138,10 @@ input.cropit-image-input {
 	margin-top: -18px;
 }
 
+.select-image-btn:active {
+	background: #516e7c;
+}
+
 .controls-wrapper {
 	margin-top: 20px;
 	text-align: center;
@@ -206,6 +210,15 @@ input.cropit-image-input {
 	margin-top: 52px;
 	margin-bottom: 52px;
 	font-family: 'Roboto', sans-serif;
+}
+
+.createAccountBtn:focus,
+.createAccountBtn:active {
+	background: #689F38;
+}
+
+.createAccountBtn:active {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
