@@ -58,14 +58,11 @@ body.newAccountPage {
 }
 
 
-
-
 /* New account page */
 
 section.newAccountContainer {
 	width: 350px;
 	margin: 0 auto;
-	min-height: 360px;
 }
 
 section.newAccountContainer h2 {
@@ -117,8 +114,7 @@ section.newAccountContainer  input.mi {
 	cursor: move;
 }
 
-/* Hide file input */
-input.cropit-image-input {
+input.cropit-image-input {	/* Hide file input */
 	visibility: hidden;
 }
 
@@ -222,9 +218,7 @@ input.cropit-image-input {
 }
 
 
-
-
-/**/
+/* Index.php */
 
 #map {
 	height: 100%;
@@ -370,7 +364,6 @@ label {
 }
 
 
-
 /* Page loader */
 
 #pageloader {
@@ -469,4 +462,18 @@ label {
 
 #pageloader svg:nth-child(1){
 	stroke: rgb(158, 158, 158);
+}
+
+
+
+
+/* Media queries */
+
+@media only screen and (max-width: 480px) {
+	
+	section.newAccountContainer {
+		width: 100%;
+		margin: 0;
+	}
+	
 }
