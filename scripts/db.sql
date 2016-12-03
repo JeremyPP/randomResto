@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS `rr_admins` (
 CREATE TABLE IF NOT EXISTS `rr_group` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(50) NOT NULL,
+  `admin_uid` int(11) NOT NULL,
+  CONSTRAINT fk_user_id FOREIGN KEY (`uid`) REFERENCES rr_user(id),
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
